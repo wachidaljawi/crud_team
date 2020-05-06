@@ -1,0 +1,326 @@
+.navbar-nav :hover {
+    color: aqua;
+}
+
+i :hover {
+    color: red;
+}
+
+.search_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background: #FF4A52;
+    width: 60px;
+}
+
+.carousel-item {
+    margin-top: 250px;
+}
+
+#carouselExampleCaptions {
+    height: 600px;
+    background: url(../img/raja-ampat.jpg);
+    background-size: cover;
+}
+
+.primary-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    padding: 0 12px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 160px;
+    height: 46px;
+    border-left: 2px solid #e16521;
+    border-right: 2px solid #e4381C;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #e4381C), to(#e16521)), -webkit-gradient(linear, left top, right top, from(#e4381C), color-stop(0%, #e16521));
+    background-image: -o-linear-gradient(left, #e4381C 100%, #e16521 100%), -o-linear-gradient(left, #e4381C 0%, #e16521 0%);
+    background-image: linear-gradient(to right, #e4381C 100%, #e16521 100%), linear-gradient(to right, #e4381C 0%, #e16521 0%);
+
+    -webkit-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    line-height: 45px;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.primary-btn:hover {
+    background: #e4381C;
+}
+
+.primary-btn:after {
+    color: #fff;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    background: #e16521;
+    background: -webkit-gradient(linear, left top, right top, from(#e16521), to(#e4381C));
+    background: -o-linear-gradient(left, #e16521, #e4381C);
+    background: linear-gradient(to right, #e16521, #e4381C);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.where_togo_area {
+    background: #040E27;
+    padding: 50px 0;
+}
+
+.where_togo_area .form_area h3 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.where_togo_area .search_wrap .search_form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+}
+
+.where_togo_area .search_wrap .input_field {
+    width: 220px;
+}
+
+.where_togo_area .search_wrap .input_field input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #363E52;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.where_togo_area .search_wrap .input_field select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #363E52;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.popular_destination_area {
+    padding-top: 140px;
+    padding-bottom: 120px;
+}
+
+.popular_destination_area .single_destination {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.popular_destination_area .single_destination:before {
+    background: -moz-linear-gradient(top, rgba(4, 14, 39, 0) 0%, rgba(4, 14, 39, 0.7) 100%);
+
+    background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, rgba(4, 14, 39, 0.7) 100%);
+
+    background: linear-gradient(to bottom, rgba(4, 14, 39, 0) 0%, rgba(4, 14, 39, 0.7) 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00040e27', endColorstr='#b3040e27', GradientType=0);
+
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+/* line 30, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
+.popular_destination_area .single_destination .thumb img {
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* line 35, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
+.popular_destination_area .single_destination .content {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 7;
+}
+
+/* line 40, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
+.popular_destination_area .single_destination .content p {
+    margin-bottom: 0;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.popular_destination_area .single_destination .content p a {
+    display: inline-block;
+    background: #1EC6B6;
+    font-size: 12px;
+    border-radius: 30px;
+    font-weight: 400;
+    padding: 0px 12px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin-left: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.popular_destination_area .single_destination:hover {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+
+.popular_destination_area .single_destination:hover .content p {
+    color: #FF4A52;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+.popular_destination_area .single_destination:hover .content p a {
+    background: #FF4A52;
+    color: #fff;
+}
+
+
+.destination_banner_wrap {
+    background-image: url(../img/banner/destination.png);
+    padding: 340px 0;
+    background-size: cover;
+    background-position: center center;
+}
+
+.destination_banner_wrap.overlay:before {
+    opacity: .3;
+}
+
+.destination_banner_wrap .destination_text h3 {
+    font-size: 80px;
+    line-height: 90px;
+    color: #fff;
+    font-family: "Nothing You Could Do", cursive;
+    margin-bottom: 0;
+}
+
+.destination_banner_wrap .destination_text p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.destination_details_info {
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+.newletter_area {
+    background-image: url(../img/banner/bradcam2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 67px 0;
+}
+
+.newletter_area.overlay::before {
+    opacity: .7;
+}
+
+.newletter_area .newsletter_text h4 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0;
+    margin-bottom: 11px;
+}
+
+.newletter_area .newsletter_text p {
+    color: rgb(114, 110, 110);
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.newletter_area .mail_form .newsletter_field {
+    margin-right: 10px;
+}
+
+.newletter_area .mail_form .newsletter_field input {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 15px;
+    color: #000;
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+}
+
+.newletter_area .mail_form .newsletter_field input::placeholder {
+    color: #AAB1B7;
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+}
+
+.newletter_area .mail_form .newsletter_field input:focus {
+    outline: none;
+}
