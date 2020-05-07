@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>@yield('title')</title>
+    <title>Form input bagian</title>
 </head>
 <body>
 
@@ -16,8 +16,8 @@
             <div class="col-md-12">
                 <h1 class="text-center">FORM BAGIAN KARYAWAN PT GARUDA</h1>
                 <hr>
-                {{-- <form action="{{ route('gudang.store') }}" method="POST">
-                    @csrf --}}
+                <form action="{{ route('bagian.store') }}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="bagian">Bagian</label>
                         <select name="bagian" id="bagian" class="form-control">
@@ -29,6 +29,12 @@
                             </option>
                             <option value="Fullstack Developer" {{ old('bagian') == 'Fullstack Developer' ? 'selected' : '' }}>
                                 Fullstack Developer
+                            </option>
+                            <option value="Admin" {{ old('bagian') == 'Admin' ? 'selected' : '' }}>
+                                Admin
+                            </option>
+                            <option value="Hrd" {{ old('bagian') == 'Hrd' ? 'selected' : '' }}>
+                                Hrd
                             </option>
                         </select>
                         @error('bagian')

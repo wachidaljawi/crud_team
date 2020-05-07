@@ -23,14 +23,13 @@ class BagianController extends Controller
         $validatedData = $request->validate([
             'bagian' => 'required',
         ]);
-        bagian::created($validatedData);
-        Session::flash('success', 'Data berhasil ditambahkan');
+        bagian::create($validatedData);
+        $request->session()->flash('pesan', "Data {$validatedData['bagian']} berhasil disimpan");
         return redirect('/bagian');
     }
 
-    public function show($id)
+    public function show(bagian $bagian)
     {
-        $bagian = bagian::find($id);
         return view('pages.bagian.detail-bagian', ['bagian' => $bagian]);
     }
 
@@ -40,23 +39,24 @@ class BagianController extends Controller
         return view('pages.bagian.edit-bagian', ['bagian' => $bagian]);
     }
 
-    public function update($id, Request $request)
+    public function update($bagian, Request $request)
     {
         $validatedData = $request->validate([
             'bagian' => 'required',
         ]);
-        $bagian = bagian::find($id);
+        $bagian = bagian::find($bagian);
         $bagian->bagian = $request->bagian;
-        $gudang->save();
-        Session::flash('success', 'Data berhasil diupdate');
+        $bagian->save();
+        $request->session()->flash('pesan', "Data {$validatedData['bagian']} berhasil diupdate");
         // $request->session()->flash('pesan', 'Data {$validatedData["no_invoice"]} berhasil disimpan');
         return redirect('/bagian');
     }
 
-    public function destroy($id)
+    public function destroy($bagian, Request $request)
     {
-        $bagian = bagian::find($id)->delete();
-        Session::flash('success', 'Data berhasil dihapus');
+
+        $bagian = bagian::find($bagian)->delete();
+        $request->session()->flash('pesan', "Data berhasil dihapus");
         return redirect('/bagian');
     }
 

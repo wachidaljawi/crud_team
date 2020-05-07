@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>@yield('title')</title>
+    <title>Form Edit Bagian</title>
 </head>
 <body>
 
@@ -16,9 +16,9 @@
             <div class="col-md-12">
                 <h1 class="text-center">BAGIAN KARYAWAN PT GARUDA</h1>
                 <hr>
-                    {{-- <form method="POST" action="/gudangs/update/{{ $gudang->id }}">
+                    <form method="POST" action="/bagian/{{ $bagian->id }}">
                         {{ csrf_field() }}
-                        {{ method_field('PUT') }} --}}
+                        {{ method_field('PUT') }}
                         <div class="form-group">
                             <label for="bagian">Bagian</label>
                             <select name="bagian" id="bagian" class="form-control">
