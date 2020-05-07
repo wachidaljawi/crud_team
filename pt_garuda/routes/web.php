@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
 Route::get('/karyawan', 'KaryawanController@index');
 Route::get('/karyawan/karyawan', 'KaryawanController@create');
 Route::get('/karyawan/{karyawan}', 'KaryawanController@show');

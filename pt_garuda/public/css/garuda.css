@@ -1,0 +1,57 @@
+.navbar-nav :hover {
+    color: aqua;
+}
+
+i :hover {
+    color: red;
+}
+
+.search_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background: #FF4A52;
+    width: 60px;
+}
+
+body {
+    background-color: lightgray;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+#banner-container-fluid {
+    background-image: url("../img/garuda.jpg");
+    background-attachment: fixed;
+    text-align: center;
+    color: rgb(44, 35, 31);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+
+}
+
+#banner-container-fluid .container {
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+#isi {
+    text-align: center;
+}
+
+.img-circle {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+
+}
+
+.footer {
+    text-align: center;
+}
