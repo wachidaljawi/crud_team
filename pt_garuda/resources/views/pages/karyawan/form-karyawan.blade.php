@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/garuda.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,11 +53,11 @@
                     <div class="form-group">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Laki-laki">
+                            <input type="radio" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Laki-laki">
                             <label class="form-check-label" for="laki-laki">Laki-laki</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Perempuan">
+                            <input type="radio" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Perempuan">
                             <label class="form-check-label" for="perempuan">Perempuan</label>
                         </div>
                     </div>

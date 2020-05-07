@@ -38,7 +38,7 @@ class KaryawanController extends Controller
     {
         $request->validate([
 
-            'nik' => 'required|size:10',
+            'nik' => 'required|size:6|unique:karyawans',
             'nama' => 'required',
             'alamat' => 'required',
             'no_HP' => 'required',
