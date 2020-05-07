@@ -9,4 +9,5 @@ class bagian extends Model
 {
     use SoftDeletes;
     protected $guarded = [];
+
 }

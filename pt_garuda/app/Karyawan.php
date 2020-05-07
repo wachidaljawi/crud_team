@@ -9,4 +9,6 @@ class Karyawan extends Model
 {
     use SoftDeletes;
     protected $guarded = [];
+
+
 }
