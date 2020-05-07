@@ -13,14 +13,23 @@
 
     <div class="container bg-white">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <br><br>
                 <h3>TABEL GAJI KARYAWAN PT GARUDA</h3>
-                {{-- <a href="{{ route('gudang.create') }}" class="btn btn-info btn-sm">Tambah Barang</a> --}}
+                <a href="/gaji/gaji" class="btn btn-info my-3">Tambah Data Gaji </a>
+
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Gaji</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,8 +39,13 @@
                                 {{-- <td><a href="#{{ $data->id }}">{{ $data->nik }}</a></td> --}}
                                 <td>{{ $data->gaji }}</td>
                                 <td>
-                                    {{-- <a href="/gudangs/edit/{{ $data->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/gudangs/delete/{{ $data->id }}" class="btn btn-danger btn-sm">Delete</a> --}}
+                                    <a href="{{ route ('gaji.edit', $data->id) }}" class="btn btn-warning d-inline">Edit</a>
+
+                                    <form action="{{ route ('gaji.destroy', $data->id) }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit" class="badge badge-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

@@ -14,60 +14,57 @@
     <div class="container bg-white">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">KARYAWAN PT GARUDA</h1>
+                <h1 class="text-center">FORM EDIT KARYAWAN PT GARUDA</h1>
                 <hr>
-                    {{-- <form method="POST" action="/gudangs/update/{{ $gudang->id }}">
-                        {{ csrf_field() }}
-                        {{ method_field('PUT') }} --}}
-                        <div class="form-group">
-                            <label for="no_invoice">NIK</label> 
-                            <input type="text" class="form-control" id="nik" name="nik" value="{{ $karyawan->nik }}">
-                            @error('nik')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $karyawan->nama }}">
-                            @error('nama')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <textarea name="alamat" id="alamat" rows="3" class="form-control">{{ $karyawan->alamat }}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_hp">No. HP</label> 
-                            <input type="text" class="form-control" id="no_hp" name="no_hp" value="{{ $karyawan->no_hp }}">
-                            @error('no_hp')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="umur">Umur</label> 
-                            <input type="text" class="form-control" id="umur" name="umur" value="{{ $karyawan->umur }}">
-                            @error('umur')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="nik">Jenis Kelamin</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" name="jenis_kelamin" id="laki-laki" value="L" {{ $karyawan->jenis_kelamin == 'L' ?
-                            'checked' : '' }}>
-                        <label for="laki-laki" class="form-check-input">Laki-laki</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" name="jenis_kelamin" id="perempuan" value="P" {{ $karyawan->jenis_kelamin == 'P' ?
-                            'checked' : '' }}>
-                        <label for="perempuan" class="form-check-input">Perempuan</label>
-                        </div>
-                        @error('jenis_kelamin')
+                <form action="/karyawan/{{ $karyawan->id }}" method="post">
+                    @method('patch')
+                    @csrf
+                    <div class="form-group">
+                        <label for="nik">NIK</label>
+                        <input type="text" class="form-control" id="nik"  placeholder="Masukan Nik" name="nik" value="{{ $karyawan->nik }}">
+                        @error('nik')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
-                    <button type="submit" class="btn btn-primary mb-2">Simpan</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama"  placeholder="Masukan Nama Anda" name="nama" value="{{ $karyawan->nama }}">
+                        @error('nama')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea name="alamat" id="alamat"  placeholder="Masukan Alamat Anda" rows="3" class="form-control">{{ $karyawan->alamat }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="no_HP">No. HP</label>
+                        <input type="text" class="form-control" id="no_HP"  placeholder="Masukan No Handphone" name="no_HP" value="{{ $karyawan->no_HP }}">
+                        @error('no_hp')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="umur">Umur</label>
+                        <input type="text" class="form-control" id="umur"   placeholder="Masukan Umur Anda" name="umur" value="{{ $karyawan->umur }}">
+                        @error('umur')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="jenis_kelamin">Jenis Kelamin</label>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Laki-laki">
+                            <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="jenis_kelamin" name="jenis_kelamin" value="Perempuan">
+                            <label class="form-check-label" for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a href="/karyawan" class="btn btn-warning">Kembali</a>
                 </form>
             </div>
         </div>

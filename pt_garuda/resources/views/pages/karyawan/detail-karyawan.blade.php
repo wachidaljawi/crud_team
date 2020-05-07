@@ -11,44 +11,35 @@
 </head>
 <body>
 
-    <div class="container bg-white">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h3>TABEL BIODATA KARYAWAN</h3>
-                {{-- <a href="{{ route('gudang.create') }}" class="btn btn-info btn-sm">Tambah Barang</a> --}}
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">NIK</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">No. HP</th>
-                            <th scope="col">Umur</th>
-                            <th scope="col">Jenis Kelamin</th>
-                            <th scope="col">Opsi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <tr>
-                                <td>{{ $karyawan->id }}</td>
-                                <td>{{ $karyawan->nik }}</td>
-                                <td>{{ $karyawan->nama }}</td>
-                                <td>{{ $karyawan->alamat }}</td>
-                                <td>{{ $karyawan->no_hp }}</td>
-                                <td>{{ $karyawan->umur }}</td>
-                                <td>{{ $karyawan->jenis_kelamin }}</td>
-                                <td>
-                                    {{-- <a href="/gudangs/edit/{{ $gudang->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/gudangs/delete/{{ $gudang->id }}" class="btn btn-danger btn-sm">Delete</a> --}}
-                                </td>
-                            </tr>
-                    </tbody>
-                </table>
+            <div class="col-6">
+
+                <h3 class="mt-3"><b>Detail Karyawan {{$karyawan->nama}}</b></h3>
+            </div>
+        </div>
+        {{-- <div class="card"> --}}
+            {{-- <div class="card-body"> --}}
+
+              <h5 class="card-title">{{$karyawan->nik}}</h5>
+              <h5 class="card-title">{{$karyawan->nama}}</h5>
+              <p class="card-text">{{$karyawan->alamat}}</p>
+              <p class="card-text">{{$karyawan->no_HP}}</p>
+              <p class="card-text">{{$karyawan->umur}}</p>
+              <p class="card-text">{{$karyawan->jenis_kelamin}}</p>
+
+              {{-- <a href="{{ $karyawan->id }}/edit" class="badge badge-info">Edit</a> --}}
+
+              {{-- <form action="{{ $gudang->id }}" method="post" class="d-inline">
+                @method('delete')
+                @csrf
+                <button type="submit" class="badge badge-danger">Delete</button>
+              </form> --}}
+
+              <a href="/karyawan" class="badge badge-warning">Kembali</a>
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>

@@ -16,17 +16,17 @@
             <div class="col-md-12">
                 <h1 class="text-center">GAJI KARYAWAN PT GARUDA</h1>
                 <hr>
-                    {{-- <form method="POST" action="/gudangs/update/{{ $gudang->id }}">
-                        {{ csrf_field() }}
-                        {{ method_field('PUT') }} --}}
-                        <div class="form-group">
-                            <label for="gaji">Gaji</label> 
-                            <input type="text" class="form-control" id="gaji" name="gaji" value="{{ $gaji->gaji }}">
-                            @error('gaji')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    <button type="submit" class="btn btn-primary mb-2">Simpan</button>
+                <form action="/gaji/{{ $gaji->id }}" method="post">
+                    @method('patch')
+                    @csrf
+                    <div class="form-group">
+                        <label for="gaji">Gaji</label>
+                        <input type="text" class="form-control" id="gaji" name="gaji" value="{{ $gaji->gaji }}">
+                        @error('gaji')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Simpan</button>
                 </form>
             </div>
         </div>
