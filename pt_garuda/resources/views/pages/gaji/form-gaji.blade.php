@@ -13,19 +13,21 @@
 
     <div class="container bg-white">
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">FORM GAJI KARYAWAN PT GARUDA</h1>
+            <div class="col-md-6">
+                <h1 class="text-center">FORM Tambah GAJI KARYAWAN PT GARUDA</h1>
                 <hr>
-                {{-- <form action="{{ route('gudang.store') }}" method="POST">
-                    @csrf --}}
+                <form action="/gaji" method="post">
+                    @csrf
                     <div class="form-group">
-                        <label for="gaji">Gaji</label> 
-                        <input type="text" class="form-control" id="gaji" name="gaji" value="{{ old('gaji') }}">
+                        <label for="gaji">Gaji</label>
+                        <input type="text" class="form-control" id="gaji" placeholder="Masukan Gaji" name="gaji" value="{{ old('gaji') }}">
                         @error('gaji')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2">Simpan</button>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a href="/gaji" class="btn btn-warning">Kembali</a>
                 </form>
             </div>
         </div>
