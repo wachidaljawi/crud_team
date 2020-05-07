@@ -24,3 +24,4 @@ Route::get('/bagian/{bagian}', 'BagianController@show')->name('bagian.show');
 Route::get('/bagian/{bagian}/edit', 'BagianController@edit')->name('bagian.edit');
 Route::put('/bagian/{bagian}', 'BagianController@update')->name('bagian.update');
 Route::delete('/bagian/{bagian}', 'BagianController@destroy')->name('bagian.destroy');
+
